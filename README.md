@@ -10,8 +10,9 @@ Allows the user to look up monthly apartment rent by major city -- data is pulle
 
 This program is built using React on the front-end and Express on the back-end for routing.
 You will need two terminal instances to spin up the services. One for the front-end and one for the back-end.
-If you are using just the microservice, you simply need to spin up the Express back-end.
+If you are using just the microservice, you simply need to spin up the Express back-end, and can safely ignore the front end.
 
+Spinning up the back-end:
 This can be accomplished by navigating to
 > expressAPI
 
@@ -34,6 +35,7 @@ This endpoint will respond with a .JSON of various cost of living datapoints in 
 
 Data is sent in the standard .JSON array format. For example:
 
+```javascript
 {
 "city": "los-angeles-ca"
 },
@@ -283,7 +285,7 @@ Data is sent in the standard .JSON array format. For example:
 }
 ]
 }
-
+```
 
 
 
