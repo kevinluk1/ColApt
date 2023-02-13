@@ -287,6 +287,9 @@ Data is sent in the standard .JSON array format. For example:
 }
 ```
 
+### UML Diagram
+
+![image](https://user-images.githubusercontent.com/71728686/218595751-bc6e2c52-798f-4467-85db-4ce86ebbc19c.png)
 
 
 
