@@ -4,7 +4,7 @@ Allows the user to look up monthly apartment rent by major city -- data is pulle
 ## Getting Started
 1. Download and install Node.js (https://nodejs.org/en/download/)
 2. Clone the ColApt Repo
-3. Run > NPM install to install project dependencies 
+3. ```NPM install``` to install project dependencies 
 
 ## Running the app
 
@@ -17,17 +17,17 @@ This can be accomplished by navigating to
 > expressAPI
 
 and then running
-> node controller.js
+```node controller.js```
 
 
 ### How to REQUEST data
 
 To request data from the microservice, you will need to first make sure that the back-end is running.
-Ensure controller.js is listening to port 3002. 
+Ensure controller.js is listening to port 3002. If your app is already listening to another serivce on port 3002, ensure that you change the port.
 
 The only endpoint on this app is:
 
-> /laCol
+```/laCol```
 
 This endpoint will respond with a .JSON of various cost of living datapoints in Los Angeles, specifically. 
 
