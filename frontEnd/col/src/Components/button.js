@@ -10,7 +10,6 @@ function GoButton(props) {
 
         try{
             const response = await axios.get(`http://localhost:3002/?city=${props.selectedCity}`);
-            // props.onResponse(JSON.stringify(response.data));
             props.onResponse((response.data));
 
         }

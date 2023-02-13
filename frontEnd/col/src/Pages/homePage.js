@@ -37,7 +37,6 @@ function HomePage(props) {
     }
 
     const clearSelections = () => {
-        console.log("yuyuhu")
         setClear(true);
     }
 

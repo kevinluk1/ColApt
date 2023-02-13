@@ -1,0 +1,15 @@
+[
+  {
+    "city": "los-angeles-ca"
+  },
+  {
+    "Version": 1,
+    "Country Name": "United States",
+    "City Name": "Los Angeles Ca",
+    "Cost of Living Month Total": "1619.62",
+    "Currency": "USD",
+    "Note": "Total cost of living in Los Angeles for two person with average consumption for one month will be 1619.62 USD, no rent price included",
+    "Status": 200,
+    "Success": true
+  }
+]

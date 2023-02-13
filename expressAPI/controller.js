@@ -39,13 +39,34 @@ app.get('/', async (req, res) => {
     res.send(responseData)
 })
 
-// async function main() {
-//     await getData();
-//     console.log(responseData);
-// }
-//
-//
-// main();
+app.get('/receiveMessage', async (req, res) => {
+    try {
+        console.log("Message Requested")
+        res.send("A message from CS361")
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+app.post('/sendMessage', async (req, res) => {
+    try {
+        console.log("Message Sent")
+        res.send("A message from CS361, POST request")
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+app.get('/laCol', async (req, res) => {
+    try {
+        const laCol = require('./laCol.json')
+        console.log(laCol);
+        console.log("Los Angeles Requested")
+        res.json(laCol)
+    } catch (error) {
+        console.log(error);
+    }
+})
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}...`);
