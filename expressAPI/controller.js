@@ -7,7 +7,7 @@ var axios = require('axios');
 
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'http://localhost:5002'],
     credentials: true
 }))
 
@@ -19,9 +19,15 @@ app.get('/', async (req, res) => {
         method: 'GET',
         url: `https://zylalabs.com/api/226/cities+cost+of+living+and+average+prices+api/655/cost+of+living+by+city?country=united-states&city=${city}`,
         headers: {
-            'Authorization': 'Bearer 685|l5FH8kGi6S3bC0CnrMA1hzXL8Bny6qKSHnDcexDo',
+            'Authorization': 'Bearer 664|oMNo9KmNjtAVLoFAkikzEt5TAaWTGzS9Uy4UiXiN'
         },
     };
+    axios(config).then(function (response) {
+        console.log(JSON.stringify(response.data));
+    })
+        .catch(function (error) {
+            console.log(error);
+        });
 
     let responseData;
     async function getData() {

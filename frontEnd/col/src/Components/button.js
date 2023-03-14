@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
 import axios from 'axios';
 
+
+
 function GoButton(props) {
 
     const handleClick = async () => {
@@ -11,6 +13,7 @@ function GoButton(props) {
         try{
             const response = await axios.get(`http://localhost:3002/?city=${props.selectedCity}`);
             props.onResponse((response.data));
+            console.log(response.data)
 
         }
         catch (e){

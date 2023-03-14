@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function BreakdownButton(props) {
+    console.log("ajldfjas")
+    console.log(props.responseData)
     return (
         <div>
             <h3>(ADVANCED) Cost Breakdown (Groceries, Utilities, etc.,)</h3>

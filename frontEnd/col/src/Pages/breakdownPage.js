@@ -3,7 +3,7 @@ import BackButton from "../Components/backButton";
 import BackPopUp from "../Components/backPopUp";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import axios from "axios";
-import BreakdownTable from "../Components/breakdownTable";
+import breakdownTable from "../Components/breakdownTable";
 function BreakdownPage(props){
     const [objectData, setObjectData] = useState(null);
     const[marketPrices, setMarketPrices] = useState(null);
@@ -21,9 +21,6 @@ function BreakdownPage(props){
             setMarketPrices(JSON.stringify(x))
         }
     }, [objectData])
-
-
-
 
     return (
 

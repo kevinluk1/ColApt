@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 function CitySelect({onCitySelected}) {
     const [selectedCity, setSelectedCity] = useState('');
 
@@ -7,7 +6,6 @@ function CitySelect({onCitySelected}) {
         setSelectedCity(event.target.value);
         onCitySelected(event.target.value);
     };
-
     return (
         <form>
             Choose a city:
@@ -17,10 +15,12 @@ function CitySelect({onCitySelected}) {
                     <option value="new-york-ny">New York</option>
                     <option value="los-angeles-ca">Los Angeles</option>
                     <option value="boston-ma">Boston</option>
+                    <option value="chicago-il">Chicago</option>
+                    <option value="houston-tx">Houston</option>
+                    <option value="philadelphia-pa">Philadelphia</option>
+                    <option value="phoenix-az">Phoenix</option>
                 </select>
-
         </form>
     );
 }
-
 export default CitySelect;
