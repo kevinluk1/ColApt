@@ -1,37 +1,30 @@
-import React, {useEffect, useState} from 'react';
-import BackButton from "../Components/backButton";
+import React, { useEffect, useState } from "react";
 import BackPopUp from "../Components/backPopUp";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import axios from "axios";
-import breakdownTable from "../Components/breakdownTable";
-function BreakdownPage(props){
-    const [objectData, setObjectData] = useState(null);
-    const[marketPrices, setMarketPrices] = useState(null);
+import BreakdownTable from "../Components/breakdownTable";
+function BreakdownPage(props) {
+  const [objectData, setObjectData] = useState(null);
+  useEffect(() => {
+    if (props.responseData) {
+      setObjectData(props.responseData);
+    }
+  }, [props.responseData, objectData]);
 
-    useEffect(() => {
-        if (props.responseData) {
-            setObjectData(props.responseData)
-        }
-    }, [props.responseData, objectData])
+  // useEffect(() => {
+  //     let x
+  //     if (objectData) {
+  //         x = objectData["Markets prices"]
+  //         setMarketPrices(JSON.stringify(x))
+  //     }
+  // }, [objectData])
 
-    useEffect(() => {
-        let x
-        if (objectData) {
-            x = objectData["Markets prices"]
-            setMarketPrices(JSON.stringify(x))
-        }
-    }, [objectData])
-
-    return (
-
-        <div>
-            <h3> Cost of Groceries: </h3>
-            <p>{marketPrices}</p>
-            <BackPopUp />
-
-        </div>
-
-    )
+  return (
+    <div>
+      <h3> Cost of Groceries: </h3>
+      {/*<p>{marketPrices}</p>*/}
+      <BreakdownTable data={objectData} />
+      <BackPopUp />
+    </div>
+  );
 }
 
 export default BreakdownPage;

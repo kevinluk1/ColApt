@@ -1,26 +1,30 @@
 import React from "react";
 
 function BreakdownTable(props) {
-    console.log(props.responseObject)
-    return (
-        <table>
-            <thead>
-            <tr>
-                <th>Layout/Location</th>
-                <th>Cost</th>
-            </tr>
-            </thead>
-            <tbody>
-            {props.responseObject["Rent Per Month prices"].map((item, index) => (
-                <tr key={index}>
-                    <td>{item.Cost}</td>
-                    <td>{item.Value}</td>
-                </tr>
-            ))}
-            </tbody>
-            <h3>{(props.responseObject.Note)}</h3>
-        </table>
-    );
+  if (!props.data) {
+    return null;
+  }
+  console.log("jslfs");
+  console.log(props.data["Markets prices"]);
+
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Layout/Location</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        {props.data["Markets prices"].map((item, index) => (
+          <tr key={index}>
+            <td>{item.Cost}</td>
+            <td>{item.Value}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
 }
 
 export default BreakdownTable;
