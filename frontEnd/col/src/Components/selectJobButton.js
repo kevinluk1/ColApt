@@ -5,7 +5,6 @@ import axios from "axios";
 function SelectJobButton(props) {
   const handleClick = async () => {
     console.log(`Selected Job: ${props.selectedJob}`);
-
     try {
       const response = await axios.get(
         `http://localhost:5002/?title=${props.selectedJob}`

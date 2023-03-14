@@ -1,7 +1,5 @@
 import React from "react";
-
 function DisplayTable(props) {
-  console.log("displaytable");
   console.log(props.responseObject);
   return (
     <table>

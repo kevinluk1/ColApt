@@ -8,23 +8,12 @@ function BreakdownPage(props) {
       setObjectData(props.responseData);
     }
   }, [props.responseData, objectData]);
-
-  // useEffect(() => {
-  //     let x
-  //     if (objectData) {
-  //         x = objectData["Markets prices"]
-  //         setMarketPrices(JSON.stringify(x))
-  //     }
-  // }, [objectData])
-
   return (
     <div>
       <h3> Cost of Groceries: </h3>
-      {/*<p>{marketPrices}</p>*/}
       <BreakdownTable data={objectData} />
       <BackPopUp />
     </div>
   );
 }
-
 export default BreakdownPage;

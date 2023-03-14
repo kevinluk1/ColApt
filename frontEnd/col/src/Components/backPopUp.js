@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import BackButton from "./backButton";
 
 function ConfirmPopup() {
   const [isConfirmPopupVisible, setIsConfirmPopupVisible] = useState(false);
@@ -20,7 +21,7 @@ function ConfirmPopup() {
 
   return (
     <div>
-      <button onClick={handleProceed}>Back</button>
+      <BackButton onClick={handleProceed}>Back</BackButton>
       {isConfirmPopupVisible && (
         <div>
           <p>Are you sure you want to proceed?</p>

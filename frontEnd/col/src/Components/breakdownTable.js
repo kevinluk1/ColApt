@@ -4,7 +4,6 @@ function BreakdownTable(props) {
   if (!props.data) {
     return null;
   }
-  console.log("jslfs");
   console.log(props.data["Markets prices"]);
 
   return (
